@@ -49,12 +49,14 @@
             // 
             // UsernameTextBox
             // 
+            this.UsernameTextBox.BackColor = System.Drawing.SystemColors.Window;
             this.UsernameTextBox.Font = new System.Drawing.Font("Lucida Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.UsernameTextBox.Location = new System.Drawing.Point(30, 123);
-            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.UsernameTextBox.Margin = new System.Windows.Forms.Padding(7);
             this.UsernameTextBox.Name = "UsernameTextBox";
             this.UsernameTextBox.Size = new System.Drawing.Size(370, 39);
             this.UsernameTextBox.TabIndex = 1;
+            this.UsernameTextBox.Leave += new System.EventHandler(this.UsernameTextBox_Leave);
             // 
             // PasswordTextBox
             // 
@@ -65,6 +67,7 @@
             this.PasswordTextBox.PasswordChar = '*';
             this.PasswordTextBox.Size = new System.Drawing.Size(370, 39);
             this.PasswordTextBox.TabIndex = 3;
+            this.PasswordTextBox.Leave += new System.EventHandler(this.PasswordTextBox_Leave);
             // 
             // PasswordLabel
             // 
@@ -98,6 +101,7 @@
             // 
             // LoginForm
             // 
+            this.AcceptButton = this.LoginButton;
             this.AutoScaleDimensions = new System.Drawing.SizeF(16F, 32F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(434, 412);
@@ -108,7 +112,7 @@
             this.Controls.Add(this.UsernameTextBox);
             this.Controls.Add(this.UsernameLabel);
             this.Font = new System.Drawing.Font("Lucida Sans", 20F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Margin = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.Margin = new System.Windows.Forms.Padding(7);
             this.Name = "LoginForm";
             this.Text = "Login Form";
             this.ResumeLayout(false);
